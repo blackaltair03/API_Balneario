@@ -37,3 +37,61 @@ Este proyecto es una **API REST** construida con **Laravel 10**.
 ```bash
 git clone https://github.com/TU-USUARIO/API_Balneario.git
 cd API_Balneario
+
+```
+---
+## 🌿 Gestión de Ramas
+```bash
+# Cambiar a develop
+git checkout develop
+
+# Crear nueva rama feature
+git checkout -b feature/nombre-funcionalidad
+git push -u origin feature/nombre-funcionalidad
+
+# Crear rama hotfix (desde main)
+git checkout main
+git checkout -b hotfix/nombre-fix
+```
+---
+##🔄 Flujo de Trabajo
+# Subir cambios
+```bash
+git add .
+git commit -m "Mensaje descriptivo"
+git push origin nombre-rama
+
+# Sincronizar rama
+git fetch origin
+git rebase origin/develop
+🆘 Solución de Problemas
+bash
+# Resolver conflictos en rebase
+git add .
+git rebase --continue
+
+# Cancelar rebase
+git rebase --abort
+
+# Resetear cambios
+git reset --hard COMMIT_ID
+
+# Eliminar ramas
+git branch -d nombre-rama
+git push origin --delete nombre-rama
+```
+---
+##🔄 Actualizar ramas
+```bash
+# Para features
+git checkout develop
+git pull origin develop
+git checkout feature/nombre-rama
+git merge develop
+
+# Para hotfixes
+git checkout main
+git pull origin main
+git checkout hotfix/nombre-fix
+git merge main
+```
